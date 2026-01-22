@@ -1,0 +1,129 @@
+{
+  "app": {
+    "title": "平方根计算器",
+    "nav": {
+      "calculator": "计算器",
+      "documentation": "文档",
+      "support": "支持"
+    },
+    "footer": "© 2026 国立研究大学高等经济学院，PSAPR-25-2组团队"
+  },
+  "calculator": {
+    "title": "平方根计算器",
+    "inputLabel": "输入数字或表达式",
+    "inputPlaceholder": "例如：16、-4、2+3i、x^2+4",
+    "precisionLabel": "小数精度",
+    "calculateButton": "计算 √",
+    "result": "结果",
+    "realPart": "实部",
+    "imaginaryPart": "虚部",
+    "modes": {
+      "real": "实数",
+      "complex": "复数",
+      "arbitrary": "任意精度",
+      "analytical": "解析（符号）"
+    },
+    "modeLabel": "计算模式",
+    "hints": {
+      "real": "输入一个非负实数（例如：16、2.5、0）",
+      "complex": "输入一个实数或复数（例如：-4、3+4i、2i）",
+      "arbitrary": "输入任意长度的十进制数（例如：2、123456789.123）",
+      "analytical": "输入一个代数表达式（例如：x^2、4x^2、x^4、16）"
+    },
+    "errors": {
+      "invalidInput": "输入无效。请输入有效的数字或表达式。",
+      "negativeReal": "无法计算负数的实数平方根。请切换到复数模式。",
+      "emptyInput": "请输入一个值。",
+      "invalidExpression": "无效的数学表达式。"
+    }
+  },
+  "documentation": {
+    "title": "文档",
+    "sections": {
+      "overview": {
+        "title": "概述",
+        "content": "<p>此计算器可以计算各种类型数字的平方根：实数、复数、任意精度，甚至符号表达式。它支持多种语言，可根据您的需求进行自定义。</p>"
+      },
+      "features": {
+        "title": "功能",
+        "content": "<ul><li>实数平方根</li><li>复数支持（包括负数的根）</li><li>使用 Decimal.js 库进行任意精度计算</li><li>数学表达式的符号/解析计算</li><li>多语言界面，支持运行时切换语言</li><li>更改语言无需重启</li></ul>"
+      },
+      "modes": {
+        "title": "计算模式",
+        "content": "<p><strong>实数</strong> — 非负实数的标准平方根。</p><p><strong>复数</strong> — 处理负数并返回复数结果（例如，√-4 = 2i）。</p><p><strong>任意精度</strong> — 使用高精度十进制算术，可获得多位小数的精确结果。</p><p><strong>解析</strong> — 处理符号表达式并返回简化的平方根形式。</p>"
+      },
+      "precision": {
+        "title": "精度控制",
+        "content": "<p>在任意精度模式下，您可以指定小数位数（0-50）。这对于科学计算或需要超出标准浮点精度的精确结果时非常有用。</p>"
+      },
+      "examples": {
+        "title": "示例",
+        "content": "<ul><li>√16 = 4</li><li>√2 ≈ 1.41421356...</li><li>√-9 = 3i <em>（复数模式）</em></li><li>√(2+3i) = 1.6741... + 0.8960...i</li><li>√(x²) = |x| <em>（解析模式）</em></li></ul>"
+      },
+      "addingLanguage": {
+        "title": "添加新语言",
+        "content": "<p>要在运行时向应用程序添加新语言：</p><p><strong>步骤1：</strong>点击标题栏中语言选择器旁边的 <code>+</code> 按钮。</p><p><strong>步骤2：</strong>填写必填字段：</p><ul><li><strong>语言代码</strong> — 短代码（例如 fr 代表法语，ja 代表日语）</li><li><strong>语言名称</strong> — 英文名称（例如 French）</li><li><strong>本地名称</strong> — 该语言本身的名称（例如 Français）</li></ul><p><strong>步骤3：</strong>粘贴JSON翻译文件。JSON必须包含以下部分：</p><ul><li><code>app</code> — 应用程序标题、导航、页脚</li><li><code>calculator</code> — 所有计算器界面文本</li><li><code>documentation</code> — 文档页面内容</li><li><code>support</code> — 支持页面内容</li><li><code>common</code> — 通用界面元素</li><li><code>modal</code> — 模态对话框文本</li></ul><p><strong>重要：</strong>新语言将立即可用，无需重启应用程序。您的语言偏好将保存在浏览器中。</p>"
+      }
+    }
+  },
+  "support": {
+    "title": "支持中心",
+    "faq": {
+      "title": "常见问题",
+      "items": [
+        {
+          "question": "如何计算负数的平方根？",
+          "answer": "使用模式选择器切换到复数模式。计算器将返回虚数结果（例如，√-4 = 2i）。"
+        },
+        {
+          "question": "如何提高计算精度？",
+          "answer": "选择任意精度模式，并将精度滑块调整到所需的小数位数（最多50位）。"
+        },
+        {
+          "question": "我可以添加新语言吗？",
+          "answer": "可以！使用语言选择器中的添加语言功能。您可以在运行时添加自定义翻译，无需重启应用程序。"
+        },
+        {
+          "question": "什么是解析模式？",
+          "answer": "解析模式处理符号数学表达式并返回简化形式。例如，√(x²) 返回 |x|。"
+        }
+      ]
+    },
+    "contact": {
+      "title": "联系我们",
+      "description": "有问题或反馈？给我们发送消息，我们会回复您。",
+      "nameLabel": "您的姓名",
+      "emailLabel": "电子邮件地址",
+      "messageLabel": "消息",
+      "submitButton": "发送消息",
+      "successMessage": "谢谢！您的消息已发送。"
+    }
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "发生错误",
+    "close": "关闭",
+    "submit": "提交",
+    "cancel": "取消",
+    "language": "语言",
+    "addLanguage": "添加语言"
+  },
+  "modal": {
+    "addLanguage": {
+      "title": "添加新语言",
+      "codeLabel": "语言代码",
+      "codePlaceholder": "例如：fr",
+      "nameLabel": "语言名称（英文）",
+      "namePlaceholder": "例如：French",
+      "nativeNameLabel": "本地名称",
+      "nativeNamePlaceholder": "例如：Français",
+      "jsonLabel": "翻译（JSON）",
+      "jsonPlaceholder": "在此粘贴翻译JSON...",
+      "errors": {
+        "allFieldsRequired": "所有字段都是必填的",
+        "invalidStructure": "翻译结构无效。必须包含app、calculator和common部分。",
+        "invalidJson": "JSON格式无效"
+      }
+    }
+  }
+}

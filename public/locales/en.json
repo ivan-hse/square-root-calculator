@@ -1,0 +1,129 @@
+{
+  "app": {
+    "title": "Square Root Calculator",
+    "nav": {
+      "calculator": "Calculator",
+      "documentation": "Documentation",
+      "support": "Support"
+    },
+    "footer": "© 2026 HSE University, Team from group PSAPR-25-2"
+  },
+  "calculator": {
+    "title": "Square Root Calculator",
+    "inputLabel": "Enter a number or expression",
+    "inputPlaceholder": "e.g., 16, -4, 2+3i, x^2+4",
+    "precisionLabel": "Decimal precision",
+    "calculateButton": "Calculate √",
+    "result": "Result",
+    "realPart": "Real part",
+    "imaginaryPart": "Imaginary part",
+    "modes": {
+      "real": "Real Numbers",
+      "complex": "Complex Numbers",
+      "arbitrary": "Arbitrary Precision",
+      "analytical": "Analytical (Symbolic)"
+    },
+    "modeLabel": "Calculation Mode",
+    "hints": {
+      "real": "Enter a non-negative real number (e.g., 16, 2.5, 0)",
+      "complex": "Enter a real or complex number (e.g., -4, 3+4i, 2i)",
+      "arbitrary": "Enter a decimal number of any length (e.g., 2, 123456789.123)",
+      "analytical": "Enter an algebraic expression (e.g., x^2, 4x^2, x^4, 16)"
+    },
+    "errors": {
+      "invalidInput": "Invalid input. Please enter a valid number or expression.",
+      "negativeReal": "Cannot calculate real square root of a negative number. Switch to Complex mode.",
+      "emptyInput": "Please enter a value.",
+      "invalidExpression": "Invalid mathematical expression."
+    }
+  },
+  "documentation": {
+    "title": "Documentation",
+    "sections": {
+      "overview": {
+        "title": "Overview",
+        "content": "<p>This calculator allows you to compute square roots of various types of numbers: real, complex, arbitrary precision, and even symbolic expressions. It supports multiple languages and can be customized to your needs.</p>"
+      },
+      "features": {
+        "title": "Features",
+        "content": "<ul><li>Real number square roots</li><li>Complex number support (including roots of negative numbers)</li><li>Arbitrary precision calculations using the Decimal.js library</li><li>Symbolic/analytical computation for mathematical expressions</li><li>Multilingual interface with runtime language switching</li><li>No restart required for language changes</li></ul>"
+      },
+      "modes": {
+        "title": "Calculation Modes",
+        "content": "<p><strong>Real Numbers</strong> — Standard square root for non-negative real numbers.</p><p><strong>Complex Numbers</strong> — Handles negative numbers by returning complex results (e.g., √-4 = 2i).</p><p><strong>Arbitrary Precision</strong> — Uses high-precision decimal arithmetic for accurate results with many decimal places.</p><p><strong>Analytical</strong> — Processes symbolic expressions and returns simplified square root forms.</p>"
+      },
+      "precision": {
+        "title": "Precision Control",
+        "content": "<p>In Arbitrary Precision mode, you can specify the number of decimal places (0-50). This is useful for scientific calculations or when you need exact results beyond standard floating-point precision.</p>"
+      },
+      "examples": {
+        "title": "Examples",
+        "content": "<ul><li>√16 = 4</li><li>√2 ≈ 1.41421356...</li><li>√-9 = 3i <em>(complex mode)</em></li><li>√(2+3i) = 1.6741... + 0.8960...i</li><li>√(x²) = |x| <em>(analytical mode)</em></li></ul>"
+      },
+      "addingLanguage": {
+        "title": "Adding a New Language",
+        "content": "<p>To add a new language to the application at runtime:</p><p><strong>Step 1:</strong> Click the <code>+</code> button next to the language selector in the header.</p><p><strong>Step 2:</strong> Fill in the required fields:</p><ul><li><strong>Language Code</strong> — A short code (e.g., \"fr\" for French, \"ja\" for Japanese)</li><li><strong>Language Name</strong> — The name in English (e.g., \"French\")</li><li><strong>Native Name</strong> — The name in the language itself (e.g., \"Français\")</li></ul><p><strong>Step 3:</strong> Paste the JSON translation file. The JSON must include these sections:</p><ul><li><code>app</code> — Application title, navigation, footer</li><li><code>calculator</code> — All calculator interface texts</li><li><code>documentation</code> — Documentation page content</li><li><code>support</code> — Support page content</li><li><code>common</code> — Common UI elements</li><li><code>modal</code> — Modal dialog texts</li></ul><p><strong>Important:</strong> The new language will be available immediately without restarting the application. Your language preference is saved in the browser.</p>"
+      }
+    }
+  },
+  "support": {
+    "title": "Support Center",
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "How do I calculate the square root of a negative number?",
+          "answer": "Switch to 'Complex Numbers' mode using the mode selector. The calculator will return the imaginary result (e.g., √-4 = 2i)."
+        },
+        {
+          "question": "How can I increase calculation precision?",
+          "answer": "Select 'Arbitrary Precision' mode and adjust the precision slider to your desired number of decimal places (up to 50)."
+        },
+        {
+          "question": "Can I add a new language?",
+          "answer": "Yes! Use the 'Add Language' feature in the language selector. You can add custom translations at runtime without restarting the application."
+        },
+        {
+          "question": "What is analytical mode?",
+          "answer": "Analytical mode processes symbolic mathematical expressions and returns simplified forms. For example, √(x²) returns |x|."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "Have a question or feedback? Send us a message and we'll get back to you.",
+      "nameLabel": "Your Name",
+      "emailLabel": "Email Address",
+      "messageLabel": "Message",
+      "submitButton": "Send Message",
+      "successMessage": "Thank you! Your message has been sent."
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "close": "Close",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "language": "Language",
+    "addLanguage": "Add Language"
+  },
+  "modal": {
+    "addLanguage": {
+      "title": "Add New Language",
+      "codeLabel": "Language Code",
+      "codePlaceholder": "e.g., fr",
+      "nameLabel": "Language Name (English)",
+      "namePlaceholder": "e.g., French",
+      "nativeNameLabel": "Native Name",
+      "nativeNamePlaceholder": "e.g., Français",
+      "jsonLabel": "Translations (JSON)",
+      "jsonPlaceholder": "Paste the translation JSON here...",
+      "errors": {
+        "allFieldsRequired": "All fields are required",
+        "invalidStructure": "Invalid translation structure. Must include app, calculator, and common sections.",
+        "invalidJson": "Invalid JSON format"
+      }
+    }
+  }
+}

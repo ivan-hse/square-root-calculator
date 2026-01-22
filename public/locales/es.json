@@ -1,0 +1,129 @@
+{
+  "app": {
+    "title": "Calculadora de raiz cuadrada",
+    "nav": {
+      "calculator": "Calculadora",
+      "documentation": "Documentacion",
+      "support": "Soporte"
+    },
+    "footer": "© 2026 Universidad HSE, Equipo del grupo PSAPR-25-2"
+  },
+  "calculator": {
+    "title": "Calculadora de raiz cuadrada",
+    "inputLabel": "Ingrese un numero o expresion",
+    "inputPlaceholder": "ej., 16, -4, 2+3i, x^2+4",
+    "precisionLabel": "Precision decimal",
+    "calculateButton": "Calcular √",
+    "result": "Resultado",
+    "realPart": "Parte real",
+    "imaginaryPart": "Parte imaginaria",
+    "modes": {
+      "real": "Numeros reales",
+      "complex": "Numeros complejos",
+      "arbitrary": "Precision arbitraria",
+      "analytical": "Analitico (simbolico)"
+    },
+    "modeLabel": "Modo de calculo",
+    "hints": {
+      "real": "Ingrese un numero real no negativo (ej., 16, 2.5, 0)",
+      "complex": "Ingrese un numero real o complejo (ej., -4, 3+4i, 2i)",
+      "arbitrary": "Ingrese un numero decimal de cualquier longitud (ej., 2, 123456789.123)",
+      "analytical": "Ingrese una expresion algebraica (ej., x^2, 4x^2, x^4, 16)"
+    },
+    "errors": {
+      "invalidInput": "Entrada invalida. Ingrese un numero o expresion valida.",
+      "negativeReal": "No se puede calcular la raiz cuadrada real de un numero negativo. Cambie al modo Complejo.",
+      "emptyInput": "Por favor ingrese un valor.",
+      "invalidExpression": "Expresion matematica invalida."
+    }
+  },
+  "documentation": {
+    "title": "Documentacion",
+    "sections": {
+      "overview": {
+        "title": "Descripcion general",
+        "content": "<p>Esta calculadora permite calcular raices cuadradas de varios tipos de numeros: reales, complejos, precision arbitraria e incluso expresiones simbolicas. Soporta multiples idiomas y puede personalizarse segun sus necesidades.</p>"
+      },
+      "features": {
+        "title": "Caracteristicas",
+        "content": "<ul><li>Raices cuadradas de numeros reales</li><li>Soporte de numeros complejos (incluyendo raices de numeros negativos)</li><li>Calculos de precision arbitraria usando la biblioteca Decimal.js</li><li>Calculo simbolico/analitico para expresiones matematicas</li><li>Interfaz multilingue con cambio de idioma en tiempo de ejecucion</li><li>No requiere reinicio para cambios de idioma</li></ul>"
+      },
+      "modes": {
+        "title": "Modos de calculo",
+        "content": "<p><strong>Numeros reales</strong> — Raiz cuadrada estandar para numeros reales no negativos.</p><p><strong>Numeros complejos</strong> — Maneja numeros negativos devolviendo resultados complejos (ej., √-4 = 2i).</p><p><strong>Precision arbitraria</strong> — Usa aritmetica decimal de alta precision para resultados exactos con muchos decimales.</p><p><strong>Analitico</strong> — Procesa expresiones simbolicas y devuelve formas simplificadas de raiz cuadrada.</p>"
+      },
+      "precision": {
+        "title": "Control de precision",
+        "content": "<p>En el modo de Precision arbitraria, puede especificar el numero de decimales (0-50). Esto es util para calculos cientificos o cuando necesita resultados exactos mas alla de la precision estandar de punto flotante.</p>"
+      },
+      "examples": {
+        "title": "Ejemplos",
+        "content": "<ul><li>√16 = 4</li><li>√2 ≈ 1.41421356...</li><li>√-9 = 3i <em>(modo complejo)</em></li><li>√(2+3i) = 1.6741... + 0.8960...i</li><li>√(x²) = |x| <em>(modo analitico)</em></li></ul>"
+      },
+      "addingLanguage": {
+        "title": "Agregar un nuevo idioma",
+        "content": "<p>Para agregar un nuevo idioma a la aplicacion en tiempo de ejecucion:</p><p><strong>Paso 1:</strong> Haga clic en el boton <code>+</code> junto al selector de idioma en el encabezado.</p><p><strong>Paso 2:</strong> Complete los campos requeridos:</p><ul><li><strong>Codigo de idioma</strong> — Un codigo corto (ej., \"fr\" para frances, \"ja\" para japones)</li><li><strong>Nombre del idioma</strong> — El nombre en ingles (ej., \"French\")</li><li><strong>Nombre nativo</strong> — El nombre en el idioma mismo (ej., \"Français\")</li></ul><p><strong>Paso 3:</strong> Pegue el archivo JSON de traduccion. El JSON debe incluir estas secciones:</p><ul><li><code>app</code> — Titulo de la aplicacion, navegacion, pie de pagina</li><li><code>calculator</code> — Todos los textos de la interfaz de la calculadora</li><li><code>documentation</code> — Contenido de la pagina de documentacion</li><li><code>support</code> — Contenido de la pagina de soporte</li><li><code>common</code> — Elementos comunes de la interfaz</li><li><code>modal</code> — Textos de dialogos modales</li></ul><p><strong>Importante:</strong> El nuevo idioma estara disponible inmediatamente sin reiniciar la aplicacion. Su preferencia de idioma se guarda en el navegador.</p>"
+      }
+    }
+  },
+  "support": {
+    "title": "Centro de soporte",
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "question": "Como calculo la raiz cuadrada de un numero negativo?",
+          "answer": "Cambie al modo 'Numeros complejos' usando el selector de modo. La calculadora devolvera el resultado imaginario (ej., √-4 = 2i)."
+        },
+        {
+          "question": "Como puedo aumentar la precision del calculo?",
+          "answer": "Seleccione el modo 'Precision arbitraria' y ajuste el control deslizante de precision al numero deseado de decimales (hasta 50)."
+        },
+        {
+          "question": "Puedo agregar un nuevo idioma?",
+          "answer": "Si! Use la funcion 'Agregar idioma' en el selector de idiomas. Puede agregar traducciones personalizadas en tiempo de ejecucion sin reiniciar la aplicacion."
+        },
+        {
+          "question": "Que es el modo analitico?",
+          "answer": "El modo analitico procesa expresiones matematicas simbolicas y devuelve formas simplificadas. Por ejemplo, √(x²) devuelve |x|."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contactenos",
+      "description": "Tiene una pregunta o comentario? Envienos un mensaje y le responderemos.",
+      "nameLabel": "Su nombre",
+      "emailLabel": "Direccion de correo electronico",
+      "messageLabel": "Mensaje",
+      "submitButton": "Enviar mensaje",
+      "successMessage": "Gracias! Su mensaje ha sido enviado."
+    }
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Ocurrio un error",
+    "close": "Cerrar",
+    "submit": "Enviar",
+    "cancel": "Cancelar",
+    "language": "Idioma",
+    "addLanguage": "Agregar idioma"
+  },
+  "modal": {
+    "addLanguage": {
+      "title": "Agregar nuevo idioma",
+      "codeLabel": "Codigo de idioma",
+      "codePlaceholder": "ej., fr",
+      "nameLabel": "Nombre del idioma (en ingles)",
+      "namePlaceholder": "ej., French",
+      "nativeNameLabel": "Nombre nativo",
+      "nativeNamePlaceholder": "ej., Français",
+      "jsonLabel": "Traducciones (JSON)",
+      "jsonPlaceholder": "Pegue el JSON de traduccion aqui...",
+      "errors": {
+        "allFieldsRequired": "Todos los campos son obligatorios",
+        "invalidStructure": "Estructura de traduccion invalida. Debe incluir las secciones app, calculator y common.",
+        "invalidJson": "Formato JSON invalido"
+      }
+    }
+  }
+}
